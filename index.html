@@ -2,146 +2,395 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Anbarasan Rengaraju | Senior AI, Java & Integration Specialist</title>
+  <title>Anbarasan Rengaraju | Senior Java/Payments/Integration Architect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: #f4f6f8;
-      color: #333;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1, h2 {
-      color: #1f3a5f;
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      background: #f1f4f9;
+      color: #1e2b3f;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* cards */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 10px 25px -8px rgba(0,20,50,0.15);
+      border: 1px solid rgba(0,55,120,0.08);
+      transition: all 0.15s;
+    }
+    .card:hover {
+      box-shadow: 0 20px 30px -10px rgba(0,45,90,0.18);
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #103a5e;
+      border-left: 6px solid #2a7de1;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
     }
     h3 {
-      color: #2c5aa0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1e4f7a;
+      margin-top: 1.6rem;
+      margin-bottom: 0.5rem;
     }
-    .box {
-      background: #ffffff;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .subhead {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #2a4d7a;
+      margin: 0.3rem 0 1rem 0;
+      border-bottom: 2px dashed #bac9e0;
+      padding-bottom: 0.6rem;
     }
-    .tag {
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      background: #e9eff8;
+      padding: 1rem 1.8rem;
+      border-radius: 60px;
+      margin: 1.2rem 0 0.5rem 0;
+      font-weight: 500;
+      color: #103a5e;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .badge {
       display: inline-block;
-      background: #e8f0fe;
-      color: #1a4fb3;
-      padding: 6px 10px;
-      margin: 5px 5px 0 0;
-      border-radius: 5px;
-      font-size: 14px;
+      background: #deeaf9;
+      color: #0a3b6b;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 30px;
+      letter-spacing: 0.3px;
+      border: 1px solid #b7cef0;
     }
-    ul {
-      padding-left: 20px;
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
+      margin: 0.8rem 0 0.2rem 0;
     }
-    .highlight {
+    .pill {
+      background: #eef3fc;
+      color: #1e4f7a;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid #cbdaf0;
+      transition: 0.1s;
+    }
+    .pill-strong {
+      background: #d4e2fc;
+      border-color: #2a7de1;
+      color: #0b2b4a;
+      font-weight: 600;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .compact-list {
+      list-style: none;
+      padding: 0;
+    }
+    .compact-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    .compact-list li::before {
+      content: "▹";
+      color: #1e6dc7;
       font-weight: bold;
-      color: #1a4fb3;
+      position: absolute;
+      left: 0;
     }
-    footer {
+    .project-block {
+      background: #f6faff;
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 5px solid #2a7de1;
+    }
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #00337c;
+      margin-bottom: 0.5rem;
+    }
+    .project-meta {
+      font-size: 0.95rem;
+      color: #2f4f78;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+    .tech-tag {
+      display: inline-block;
+      background: white;
+      border-radius: 16px;
+      padding: 0.2rem 1rem;
+      margin: 0.2rem 0.3rem;
+      border: 1px solid #a2bde0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #103a5e;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #d7e2f5;
+      margin: 1.8rem 0 1rem 0;
+    }
+    .footer {
       text-align: center;
-      color: #777;
-      font-size: 14px;
-      margin-top: 30px;
+      color: #526f96;
+      font-size: 0.95rem;
+      margin-top: 2.5rem;
+      border-top: 1px solid #cbdbee;
+      padding-top: 2rem;
+    }
+    .highlight-blue {
+      font-weight: 700;
+      color: #004b9a;
     }
   </style>
 </head>
-
 <body>
+<div class="container">
 
-<!-- HEADER -->
-<div class="box">
-  <h1>Anbarasan Rengaraju</h1>
-  <h3>Senior AI, Java | Integration & API Specialist | AI Developer</h3>
-  <p>
-    14+ years of experience in building and modernizing
-    <span class="highlight">banking, trade finance, and payment platforms</span>
-    using Java, Microservices, and event-driven architectures.
-  </p>
-</div>
+  <!-- HEADER with full details -->
+  <div class="card">
+    <h1>Anbarasan Rengaraju</h1>
+    <div class="subhead">AWS‑SAA • AWS‑DevOps‑Pro • Senior Java / Payments / Integration Architect</div>
+    
+    <div class="contact-bar">
+      <span class="contact-item">📞 +65 3125 1945</span>
+      <span class="contact-item">💬 +65 8332 0229</span>
+      <span class="contact-item">📧 gva.anbarasan@gmail.com</span>
+      <span class="contact-item">🔗 linkedin.com/in/anbarasanrajan</span>
+      <span class="contact-item">📍 Singapore</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 0.5rem 0 0 0; font-weight: 500;">
+      <span>🌐 Remote / Global · Immediate</span>
+      <span class="badge">Integration Architect</span>
+      <span class="badge">Payments Architect</span>
+      <span class="badge">Technical Lead / Manager</span>
+    </div>
+  </div>
 
-<!-- ABOUT -->
-<div class="box">
-  <h2>Professional Summary</h2>
-  <p>
-    Technology professional with <span class="highlight">14+ years of hands-on experience</span>
-    delivering large-scale enterprise systems in
-    <span class="highlight">Banking, Trade Finance, Payments, and Financial Services</span>.
-  </p>
-  <p>
-    Specialized in <strong>Java, Spring Boot, Microservices, Kafka, API & system integration</strong>,
-    with strong expertise in <strong>legacy modernization, tech refresh programs</strong>,
-    and cloud-native transformations.
-  </p>
-  <p>
-    Currently expanding into <strong>AI-driven solutions</strong> for intelligent automation,
-    data-driven decisioning, and next-generation enterprise platforms.
-  </p>
-</div>
+  <!-- PROFILE SUMMARY (compact) -->
+  <div class="card">
+    <h2>Profile Summary</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem;"><span class="highlight-blue">Senior Technical Lead / Solutions Architect</span> with 14+ years delivering mission-critical <strong>Payments, Mobile Money, and Core Banking</strong> platforms for Tier-1 global banks (Standard Chartered, DBS, UOB, Deutsche, HSBC, Citibank, GT Bank) across APAC, EMEA.</p>
+    <p>Specialized in <strong>Domestic/Cross-Border Payments, Real-Time Processing, Mobile Money, Digital Wallets, FX, ISO 20022, SWIFT</strong>. AWS Certified (SAA & DevOps Pro). Expert in cloud-native, event-driven banking with Java, Kafka, Kubernetes, API-led integration. Proven in modernizing legacy monoliths into secure, high-availability platforms (99.9% uptime) across AWS, Azure, PCF.</p>
+    <div class="pill-list" style="margin-top: 1.2rem;">
+      <span class="pill pill-strong">#Payments</span>
+      <span class="pill pill-strong">#MobileMoney</span>
+      <span class="pill pill-strong">#ISO20022</span>
+      <span class="pill pill-strong">#SWIFT</span>
+      <span class="pill pill-strong">#Java</span>
+      <span class="pill pill-strong">#Kafka</span>
+      <span class="pill pill-strong">#AWS</span>
+      <span class="pill pill-strong">#Kubernetes</span>
+    </div>
+  </div>
 
-<!-- CORE SKILLS -->
-<div class="box">
-  <h2>Core Technology Expertise</h2>
+  <!-- CLIENTS & DOMAIN EXPERIENCE -->
+  <div class="card">
+    <h2>Key Banking, Govt. Clients & Domain</h2>
+    <div class="grid-2">
+      <div>
+        <h3 style="margin-top:0">Tier-1 banks & institutions</h3>
+        <ul class="compact-list">
+          <li>Standard Chartered Bank – eBBS, Payments</li>
+          <li>DBS Bank – Digital Banking, Kafka event platform</li>
+          <li>HSBC Bank – Credit Card Processing</li>
+          <li>UOB Bank – CBPR+/ISO 20022 / SWIFT</li>
+          <li>Deutsche Bank – Trade Finance Messaging</li>
+          <li>Dhanalakshmi Bank – FlexCube core</li>
+          <li>GT Bank (Nigeria) – Core workflows</li>
+          <li>Samba Bank (Citi) – T24 integration</li>
+          <li>DNS Bank – Flexcube implementation</li>
+          <li>SCDF Singapore – Govt digital platform</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Core domain expertise</h3>
+        <ul class="compact-list">
+          <li>Domestic & cross-border payments, real-time</li>
+          <li>Mobile money / wallets (B2B, B2C, P2P, G2C, G2B)</li>
+          <li>ISO 20022 (pacs, camt) & SWIFT CBPR+</li>
+          <li>Electronic cheques, book transfers, FX</li>
+          <li>Telecom billing integration (Ericsson MIFE, Huawei OCS)</li>
+          <li>Core banking (T24, FlexCube, eBBS)</li>
+          <li>Regulatory compliance & L3 production support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  <h3>Backend & Architecture</h3>
-  <span class="tag">Java (8–17)</span>
-  <span class="tag">Spring Boot</span>
-  <span class="tag">Microservices</span>
-  <span class="tag">REST APIs</span>
-  <span class="tag">Event-Driven Architecture</span>
+  <!-- CORE SKILLS (detailed) -->
+  <div class="card">
+    <h2>Core Technical Skills</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Backend & Middleware</h3>
+        <div class="pill-list">
+          <span class="pill">Java 8/11/17</span><span class="pill">Spring Boot</span><span class="pill">Microservices</span>
+          <span class="pill">RESTful APIs</span><span class="pill">SOAP</span><span class="pill">Apache Camel</span>
+          <span class="pill">Apache Kafka</span><span class="pill">Event-driven</span><span class="pill">EIP</span>
+        </div>
+        <h3>Cloud & DevOps</h3>
+        <div class="pill-list">
+          <span class="pill">AWS (SAA/Pro)</span><span class="pill">Azure</span><span class="pill">PCF</span>
+          <span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">OpenShift</span>
+          <span class="pill">Jenkins</span><span class="pill">Git</span><span class="pill">CI/CD</span>
+        </div>
+        <h3>Integration & Messaging</h3>
+        <div class="pill-list">
+          <span class="pill">Kafka Streams</span><span class="pill">API Gateway</span><span class="pill">OAuth2</span>
+          <span class="pill">SWIFT</span><span class="pill">ISO 20022</span><span class="pill">Camel</span>
+        </div>
+      </div>
+      <div>
+        <h3>Databases & Data</h3>
+        <div class="pill-list">
+          <span class="pill">Oracle</span><span class="pill">MariaDB</span><span class="pill">Redis</span>
+          <span class="pill">Sybase</span><span class="pill">PostgreSQL</span><span class="pill">Hive</span>
+          <span class="pill">Hadoop</span>
+        </div>
+        <h3>Frontend & Tools</h3>
+        <div class="pill-list">
+          <span class="pill">AngularJS</span><span class="pill">ReactJS</span><span class="pill">JSP</span>
+          <span class="pill">Linux</span><span class="pill">FileNet</span><span class="pill">Shell</span>
+        </div>
+        <h3>Observability</h3>
+        <div class="pill-list">
+          <span class="pill">ELK</span><span class="pill">Prometheus</span><span class="pill">Grafana</span>
+          <span class="pill">Splunk</span><span class="pill">CloudWatch</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h3>Integration & Messaging</h3>
-  <span class="tag">Apache Kafka</span>
-  <span class="tag">Kafka Streams</span>
-  <span class="tag">API Gateway</span>
-  <span class="tag">Enterprise Integration</span>
+  <!-- KEY ACHIEVEMENTS (numbers) -->
+  <div class="card">
+    <h2>Key Achievements</h2>
+    <ul class="compact-list" style="columns: 1 300px; column-gap: 2rem;">
+      <li>Led ISO 20022 & SWIFT CBPR+ modernization for 3 Tier‑1 global banks across APAC/EMEA, enabling high‑volume real‑time cross‑border payments.</li>
+      <li>Designed event‑driven payment platforms processing <strong>50M+ transactions/month</strong> (B2B/B2C/P2P).</li>
+      <li>Modernized 5+ legacy core banking systems into cloud‑native (AWS, Azure, PCF).</li>
+      <li>Built 20+ microservices ecosystems with 99.9% uptime SLA.</li>
+      <li>Delivered multi‑country payment integrations across APAC/EMEA markets.</li>
+    </ul>
+  </div>
 
-  <h3>Banking & Payments</h3>
-  <span class="tag">Core Banking</span>
-  <span class="tag">Trade Finance</span>
-  <span class="tag">Payments</span>
-  <span class="tag">Reconciliation</span>
-  <span class="tag">ISO / Financial Messaging</span>
+  <!-- PROFESSIONAL EXPERIENCE (selected projects) -->
+  <div class="card">
+    <h2>Professional Experience (selected projects)</h2>
 
-  <h3>Modernization & Cloud</h3>
-  <span class="tag">Tech Refresh</span>
-  <span class="tag">Monolith to Microservices</span>
-  <span class="tag">Cloud-Ready Design</span>
+    <!-- Project 10: Mobile Money Transfer Prototype -->
+    <div class="project-block">
+      <div class="project-title">🔹 Mobile Money Transfer Platform (Telecom integration) | Project#10</div>
+      <div class="project-meta">Mobile Wallet / Digital Payments · Event-driven microservices</div>
+      <p>Designed cloud-native mobile money platform simulating Ericsson MIFE & Huawei OCS. Built microservices with Spring Boot, Apache Camel (EIP, content-based routing). Event-driven using Kafka for high‑throughput, audit. Provider adapters, retry, idempotent API. Containerized with Docker, deployed on K8s, CI/CD Jenkins.</p>
+      <div><span class="tech-tag">Java 17</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Apache Camel</span><span class="tech-tag">Kafka</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">Jenkins</span></div>
+    </div>
 
-  <h3>AI & Automation</h3>
-  <span class="tag">AI-Assisted Development</span>
-  <span class="tag">Intelligent Automation</span>
-  <span class="tag">Data-Driven Systems</span>
-</div>
+    <!-- HCL / Senior Technical Lead - two projects -->
+    <div class="project-block">
+      <div class="project-title">🔹 FISOPSII – Tech Refresh | SCDF Singapore (Project#9)</div>
+      <div class="project-meta">HCL Singapore · Senior Technical Lead · Jan 2025 – Sept 2025</div>
+      <p>Modernized legacy JBoss Seam to CDI microservices on OpenShift. Integrated GoBusiness, eServices using AWS S3, RDS, Lambda, CloudWatch. CI/CD on K8s, hybrid cloud.</p>
+      <div><span class="tech-tag">Java</span><span class="tech-tag">OpenShift</span><span class="tech-tag">AWS</span><span class="tech-tag">FileNet</span><span class="tech-tag">CI/CD</span></div>
+    </div>
 
-<!-- KEY STRENGTHS -->
-<div class="box">
-  <h2>Key Strengths</h2>
-  <ul>
-    <li>Designing scalable, resilient enterprise systems</li>
-    <li>Modernizing legacy Java & banking platforms</li>
-    <li>Building high-throughput Kafka-based systems</li>
-    <li>End-to-end API & system integration</li>
-    <li>Leading tech refresh and transformation initiatives</li>
-    <li>Applying AI to improve efficiency and intelligence</li>
-  </ul>
-</div>
+    <div class="project-block">
+      <div class="project-title">🔹 CBPR+ (SWIFT Compliance) | UOB Singapore (Project#8)</div>
+      <div class="project-meta">Jul 2024 – Sept 2024</div>
+      <p>Delivered CBPR+ regulatory changes, ISO 20022 transformations (pacs, camt). Cloud-enabled workflows using AWS Lambda, S3, RDS. Built CI/CD pipelines (Jenkins/GitHub Actions).</p>
+      <div><span class="tech-tag">SWIFT</span><span class="tech-tag">CBPR+</span><span class="tech-tag">ISO20022</span><span class="tech-tag">AWS</span></div>
+    </div>
 
-<!-- CONTACT -->
-<div class="box">
-  <h2>Contact</h2>
-  <p>📧 Email: <strong>gva.anbarasan@gmail.com</strong></p>
-  <p>🔗 LinkedIn: <strong>https://www.linkedin.com/in/anbarasanrajan/</strong></p>
-  <p>🌐 GitHub: <strong>https://gva-anbarasan.github.io/</strong></p>
-</div>
+    <div class="project-block">
+      <div class="project-title">🔹 FMP Advising (Trade Finance) | Deutsche Bank Singapore (Project#7)</div>
+      <div class="project-meta">Mar 2022 – May 2024</div>
+      <p>Led modernization of cross‑border payments (CBPR+, ISO 20022). Designed payment orchestration with Java microservices, Kafka, AWS. Integrated FX, compliance, routing. High‑throughput global payments.</p>
+      <div><span class="tech-tag">Java</span><span class="tech-tag">Kafka</span><span class="tech-tag">AWS</span><span class="tech-tag">ISO20022</span></div>
+    </div>
 
-<footer>
-  © 2026 Anbarasan Rengaraju | Java • Banking • Integration • AI
-</footer>
+    <div class="project-block">
+      <div class="project-title">🔹 CSSC real-time event platform | DBS Bank (Project#6)</div>
+      <div class="project-meta">NTT Data · Dec 2018 – Mar 2022</div>
+      <p>Microservices for real‑time customer interaction (mobile, chatbot, IVR). Kafka streaming pipelines. Deployed on PCF, CI/CD.</p>
+      <div><span class="tech-tag">Kafka</span><span class="tech-tag">PCF</span><span class="tech-tag">Spring Boot</span></div>
+    </div>
 
+    <!-- Early Career summary block (brief) -->
+    <div style="background:#ecf2fb; border-radius: 16px; padding: 1.2rem; margin-top: 1.2rem;">
+      <h3 style="margin-top:0">Early Career & other leadership</h3>
+      <ul class="compact-list">
+        <li><strong>Jamcracker Software</strong> – Technical Project Manager (cloud product JSDN, Cisco integration, multi‑cloud)</li>
+        <li><strong>JMR Infotech</strong> – Technical Lead (Loan Origination System “Lead‑to‑Load”, AWS migration, GT Bank)</li>
+        <li><strong>3i Infotech</strong> – Senior System Analyst (SAMBA/Citi, T24 integration)</li>
+        <li><strong>Infosys</strong> – Technology Analyst (Flex/Java, USA client)</li>
+        <li><strong>Standard Chartered Bank</strong> – Senior Software Developer (core banking, compliance)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ADDITIONAL: CERTIFICATIONS & LANGUAGES (optional but adds weight) -->
+  <div class="card">
+    <h2>AWS Certifications & Additional</h2>
+    <div class="pill-list">
+      <span class="pill pill-strong">AWS Certified Solutions Architect – Associate</span>
+      <span class="pill pill-strong">AWS Certified DevOps Engineer – Professional</span>
+      <span class="pill">Immediate availability</span>
+      <span class="pill">Work preference: Remote / Global</span>
+    </div>
+    <p style="margin-top: 0.8rem;"><span class="highlight-blue">Languages:</span> English, Tamil (professional working proficiency)</p>
+  </div>
+
+  <!-- CONTACT / FOOTER -->
+  <div class="card" style="text-align: center;">
+    <h2>Connect</h2>
+    <p style="font-size: 1.3rem; margin: 0.5rem 0;">📧 gva.anbarasan@gmail.com</p>
+    <p>🔗 linkedin.com/in/anbarasanrajan  •  🌐 github.com/gva-anbarasan</p>
+    <p style="margin-top: 1rem;">📍 Singapore  |  ✈️ Open for global / remote integration architect roles</p>
+  </div>
+
+  <div class="footer">
+    © 2026 Anbarasan Rengaraju · AWS‑SAA · AWS‑DevOps‑Pro · Senior Java | Payments | Integration Architect
+  </div>
+
+</div> <!-- container -->
 </body>
 </html>
